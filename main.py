@@ -151,8 +151,8 @@ while True:
 		print prompts
 		print res
 	elif inp == "clear":
-		inp = raw_input("ENTER PASSCODE:")
-		if inp == "531224":
+		inp = raw_input("ARE YOU SURE? Y/N")
+		if inp == "Y" or inp == "y":
 			f = open("promptData.txt", "w+")
 			f.write("")
 			f.close()
@@ -162,7 +162,7 @@ while True:
 			print "WRITTEN DATA CLEARED."
 			print "-->The \'break\' command will rewrite all data."
 		else:
-			print "INCORRECT PASSCODE."
+			print "CANCELLED"
 	elif inp == "save":
 		f = open("promptData.txt", "w+")
 		string = str(prompts)
